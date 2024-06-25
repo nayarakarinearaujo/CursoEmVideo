@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem flexível</title>
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    <P>Você está vendo a imagem completa ? Experimente ampliar o tamanho da ua janela para aproveitar a melhor experiência. <img src="imagem/favicon-16x16.png"> 
+    </P>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagem/imagem-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagem/imagem-m.png" type="image/png">
+        <img src="imagem/imagem-g.png" alt="">
+    </picture>
+    
+</body>
+</html>

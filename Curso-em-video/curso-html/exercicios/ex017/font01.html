@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+
+    <style>
+        /*Medidas absolutas
+        cm, mm, in, px, pt, pc 
+        
+        Medidas relativas
+        em, ex, rem, vw, vh, %
+
+        Na documentação W3C a recomendação oficial usar px e em
+        16px geralmente é igual a 1em, o tamanho da letra normalmente já formatado pelo sistema.
+        em sempre relativo ao tamanho natural da fonte
+
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            /*Indicado sempre usar em */
+        }
+
+        /*font-weight: bolder; Peso das fontes*/
+
+
+        h1 {
+            /*
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            font-style: italic;
+            font-size: 3em;*/
+
+            /* shorthand font
+            -fontsize -> font-waight -> font size -> font-family
+            */
+            font: italic bolder 3em 'Arial, Helvetica, sans-serif;'
+        }
+
+        h2 {
+            font: italic bold 2em 'Arial, Helvetica, sans-serif;'
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>Trabalhando com fontes</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatibus ut doloremque illo temporibus
+        exercitationem minus dicta pariatur earum odio labore esse voluptates maxime voluptatem, fugit necessitatibus
+        culpa praesentium et.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis cumque quisquam exercitationem? Temporibus, nam
+        officia quaerat quas ullam ex rerum sequi voluptates voluptas suscipit adipisci. Illo suscipit amet distinctio
+        nemo?
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, nulla amet deleniti itaque, ea inventore,
+        at esse dolores odio hic recusandae adipisci est. Aut earum inventore officia explicabo quisquam. Libero. Lorem
+        ipsum, dolor sit amet consectetur adipisicing elit. Rerum quas consequuntur doloremque est repellendus quidem
+        cumque deserunt aliquid, cum eos, recusandae sint veritatis accusamus? Omnis explicabo saepe illo fuga
+        asperiores.</p>
+
+    <h2>Subtitulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quas ratione vero omnis? Dolores ab explicabo quod
+        optio, inventore sint fugit nemo natus, harum quibusdam cumque? Maxime illum est eos? Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Architecto explicabo praesentium ex officia fugit reprehenderit libero velit
+        ullam! Dignissimos nobis at fugiat quisquam repellat laudantium, sit reprehenderit officia provident? Harum!</p>
+</body>
+
+</html>
