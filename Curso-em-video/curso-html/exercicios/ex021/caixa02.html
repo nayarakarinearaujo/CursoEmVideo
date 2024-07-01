@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgrey;
+        }
+
+        header {
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        nav {
+            background-color: gray;
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+            font-size: 1rem;
+        }
+
+        nav > a:hover {
+            color: rgb(206, 205, 205);
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        article {
+            background-color: rgb(197, 200, 201);
+            padding: 5px;
+            border-radius: 10px 0px;
+        }
+
+        article > aside {
+            background-color: rgb(144, 203, 222);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer p {
+            margin: 0px;
+        }
+
+        #bola {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+    Antigamente era feito tudo com div.
+    <div></div>
+    <span></span> -->
+
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="">Home</a>
+            <a href="">Sobre</a>
+            <a href="">Benefícios</a>
+            <a href="">Contato</a>
+            <a href="">Endereço</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="assuntos">
+
+        </section>
+
+        <section id="noticias">
+            <article>
+                <h2>Noticias</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non necessitatibus eligendi optio doloremque est, itaque voluptates! Nihil sapiente, tempora earum tempore quasi quod beatae error omnis numquam aperiam accusantium?</p>
+
+                <aside>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur repellendus ducimus minus.</p>
+                </aside>
+            </article>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Desenvolvido por Nayara</p>
+    </footer>
+
+    <div id="bola">
+
+    </div>
+
+</body>
+
+</html>
