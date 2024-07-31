@@ -7,10 +7,30 @@
     <title>Eventos DOM</title>
 
     <style>
+        body {
+            margin: auto;
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            font-weight: bolder;
+        }
+
         #area {
             font: normal 20pt Arial;
             background: green;
             color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        #area1 {
+            font: normal 20pt Arial;
+            background: pink;
+            color: black;
             width: 200px;
             height: 200px;
             line-height: 200px;
@@ -22,22 +42,71 @@
 
 <body>
 
+    <!-- Usando onlcick -->
+
+    <h1>1. Usando o atributo onclick diretamente no HTML:
+    </h1>
+    <p>Neste caso, o evento click é associado diretamente ao elemento HTML através do atributo onclick. A função clicar1
+        é chamada quando o elemento é clicado.</p>
+    <p>A função clicar1 muda o texto do elemento area1 para "Clicou Aqui" quando ele é clicado.
+
+    </p>
+    <div id="area1" onclick="clicar1()">
+        Interaja...
+    </div>
+
+    <h1>2. Usando addEventListener no JavaScript:
+    </h1>
+    <p>Neste caso, o evento click (e outros eventos) é associado ao elemento HTML usando JavaScript através do método
+        addEventListener.
+    </p>
+    <p>
+    <h2>Aqui, o elemento area tem três eventos associados:</h2>
+
+    <ul>
+        <li><span>click</span>: Chama a função clicar, que muda o texto para "Clicou!" e o fundo para vermelho.
+        </li>
+        <li><span>mouseenter</span>: Chama a função entrar, que muda o texto para "Entrou!" quando o mouse entra na área
+            do elemento.
+        </li>
+        <li>
+            <span>mouseout</span>: Chama a função sair, que muda o texto para "Saiu!" e o fundo de volta para verde
+            quando o mouse
+            sai da
+            área do elemento.
+        </li>
+
+    </ul>
+    </p>
+
+    <!-- Outra maneira de fazer  -->
     <div id="area">
         Interaja...
     </div>
 
 
+
     <script>
+
+        //Usando o atributo onclick diretamente no HTM
+        var a1 = window.document.getElementById('area1')
+
+        function clicar1() {
+            area1.innerText = 'Clicou Aqui';
+        }
+
+
+        //Usando addEventListener no JavaScript:
 
         var a = window.document.getElementById('area');
 
         a.addEventListener('click', clicar);
-        a.addEventListener('mouseenter', entrar);
-        a.addEventListener('mouseout', sair);
+        a.addEventListener('mouseenter', entrar); //Mouse entrar na div
+        a.addEventListener('mouseout', sair); //Mover o mouse para fora da div
 
         function clicar() {
             area.innerText = 'Clicou!';
-            area.style.background='red';
+            area.style.background = 'red';
         }
 
         function entrar() {
@@ -46,9 +115,9 @@
 
         function sair() {
             area.innerText = 'Saiu!';
-            area.style.background='green';
-
+            area.style.background = 'green';
         }
+
 
     </script>
 </body>

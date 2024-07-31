@@ -10,6 +10,8 @@
 
         body {
             font: normal 18pt Arial;
+            margin: auto;
+            padding: 15px;
         }
 
         input {
@@ -19,6 +21,9 @@
 
         #res {
             margin-top: 20px;
+            font-style: italic;
+            width: 350px;
+            margin-bottom: 15px;
                 }
 
     </style>
@@ -33,7 +38,11 @@
 
     <input type="button" value="somar" onclick="somar()">
 
-    <div id="res">Resultado</div>
+    <div id="res">A soma entre os dois números é:
+        <input type="text" id="resultado" class="resultado">
+    </div>
+    
+    
 
 </body>
 <script>
@@ -41,14 +50,15 @@
         //Pode usar qualquer uma tanto o id como o selector
         var tn1 = window.document.getElementById('txtn1');
         var tn2 = window.document.getElementById('txtn2');
-        var res = window.document.getElementById('res');
+        var resultado = window.document.getElementById('resultado');
 
         var n1 = Number(tn1.value)
         var n2 = Number(tn2.value)
 
         var s = n1 + n2;
 
-        res.innerHTML = `A Soma entre ${n1} e ${n2} é igual a ${s}`
+        // res.innerHTML = `A Soma entre ${n1} e ${n2} é igual a: `
+        resultado.value = s;
     }
 
 </script>
