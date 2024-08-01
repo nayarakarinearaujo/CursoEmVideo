@@ -1,52 +1,37 @@
-function calcularImc() {
-    var peso = window.document.getElementById('txtpeso');
-    var altura = window.document.getElementById('txtalt');
-    var resultado = window.document.getElementById('resultado');
-    var errorMessage = window.document.getElementById('error-message'); // Corrigido para 'error-message'
+function carregar() {
 
-    // Condição para campo vazio
-    var pesoValue = peso.value.trim(); // Usando trim() para remover espaços extras
-    var alturaValue = altura.value.trim();
+    var msg = window.document.getElementById("msg");
+    var foto = window.document.querySelector("#foto img");
 
-    errorMessage.style.display = 'none'; // Esconde a mensagem de erro
-    if (pesoValue === '' || alturaValue === '') {
-        errorMessage.style.display = 'block'; // Exibe a mensagem de erro
-        resultado.innerHTML = ''; // Limpa o resultado se houver erro
-        return;
-    }
+    var data = new Date();
+    var hora = data.getHours();
 
-    // Transformando a string recebida em número
-    var pesoNum = Number(pesoValue);
-    var alturaNum = Number(alturaValue);
+    // var hora = 8;
 
-    // Condição para o cálculo
-    var imc = pesoNum / (alturaNum * alturaNum);
+    var saudacao = ""
 
-    var classificacao = '';
 
-    if (imc < 18.5) {
-        classificacao = 'Você está abaixo do peso!';
-    } else if (imc >= 18.5 && imc < 24.9) {
-        classificacao = 'Seu peso está <strong>normal</strong>!';
-    } else if (imc >= 24.9 && imc < 29.9) {
-        classificacao = 'Você está com <strong>Sobrepeso</strong>!';
-    } else if (imc >= 30 && imc < 39.9) {
-        classificacao = 'Você está com <strong>Obesidade</strong>!';
+    if (hora >= 0 && hora < 12) {
+
+        foto.src = "img/manha250px.png";
+        // Para por a foto de acrodo com o horário
+        document.body.style.background = "#c6a36b";
+        //Para alterar a cor do body
+        saudacao = "Bom Dia!"
+
+    } else if (hora >= 12 && hora < 18) {
+
+        foto.src = "img/tarde250px.png";
+        document.body.style.background = "#ed987b";
+        saudacao = "Boa Tarde!"
+
     } else {
-        classificacao = 'Você está com <strong>Obesidade Grave</strong>!';
+
+        foto.src = "img/noite250px.png";
+        document.body.style.background = "#332e69";
+        saudacao = "Boa Noite!"
     }
 
-    resultado.innerHTML = `Seu IMC é <strong>${imc.toFixed(2)}</strong>.<br>${classificacao}`;
-}
+    msg.innerHTML = `Agora são ${hora} horas. ${saudacao}`;
 
-function limpar() {
-    // Limpa os campos de entrada
-    window.document.getElementById('txtpeso').value = '';
-    window.document.getElementById('txtalt').value = '';
-
-    // Limpa o conteúdo do resultado
-    window.document.getElementById('resultado').innerHTML = '';
-
-    // Limpa a mensagem de erro
-    window.document.getElementById('error-message').style.display = 'none'; // Corrigido para 'error-message'
 }

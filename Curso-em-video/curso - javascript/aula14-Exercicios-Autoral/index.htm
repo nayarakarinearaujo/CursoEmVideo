@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+        <section>
+            <h1>Calculadora de IMC</h1>
+            <div>
+                <p>Digite seu peso em Kg:
+                    <input type="number" name="txtpeso" id="txtpeso" placeholder="00.00" required>
+                </p>
+                <p>Digite sua altura em metros:
+                    <input type="number" name="txtalt" id="txtalt" placeholder="0.00" required>
+                </p>
+                <button onclick="calcularImc()">Calcular IMC</button>
+
+                <button onclick="limpar()">Limpar resultado</button>
+
+            </div>
+            <div id="resultado">
+            </div>
+            <div id="error-message" style="color: red; display: none;">Por favor, preencha todos os campos.</div>
+
+        </section>
+    </div>
+
+
+    <!-- <footer>
+        <p>&copy; Desenvolvido por: <a href="https://nayarakarine.com/" target="_blank">Nayara Karine</a></p>
+    </footer> -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
