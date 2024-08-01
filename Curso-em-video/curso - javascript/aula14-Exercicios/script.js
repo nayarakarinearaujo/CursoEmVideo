@@ -1,37 +1,59 @@
-function carregar() {
-
-    var msg = window.document.getElementById("msg");
-    var foto = window.document.querySelector("#foto img");
-
+function verificar() {
     var data = new Date();
-    var hora = data.getHours();
+    var ano = data.getFullYear();
+    var fAno = document.getElementById('txtano');
+    var res = document.getElementById('res');
 
-    // var hora = 8;
-
-    var saudacao = ""
-
-
-    if (hora >= 0 && hora < 12) {
-
-        foto.src = "img/manha250px.png";
-        // Para por a foto de acrodo com o horário
-        document.body.style.background = "#c6a36b";
-        //Para alterar a cor do body
-        saudacao = "Bom Dia!"
-
-    } else if (hora >= 12 && hora < 18) {
-
-        foto.src = "img/tarde250px.png";
-        document.body.style.background = "#ed987b";
-        saudacao = "Boa Tarde!"
-
+    if (fAno.value.length == 0 || fAno.value > ano) {
+        window.alert("[ERRO] Verifique os dados e tente novamente!")
     } else {
+        var fsex = document.getElementsByName('radsex');
+        var idade = ano - Number(fAno.value);
+        var genero = ''
 
-        foto.src = "img/noite250px.png";
-        document.body.style.background = "#332e69";
-        saudacao = "Boa Noite!"
+        var img = document.createElement('img');
+        img.setAttribute('id', 'foto');
+
+        if (fsex[0].checked) {
+            genero = 'Homem'
+
+            if (idade > 0 && idade < 10) {
+
+                //criança
+            } else if (idade < 21) {
+
+                //jovem
+
+            } else if (idade < 50) {
+
+                //adulto
+
+            } else {
+
+                //idoso
+            }
+
+        } else if (fsex[1].checked) {
+            genero = 'Mulher'
+            if (idade > 0 && idade < 10) {
+
+                //criança
+            } else if (idade < 21) {
+
+                //jovem
+
+            } else if (idade < 50) {
+
+                //adulto
+
+            } else {
+
+                //idoso
+            }
+        }
+
+        res.style.textAlign = 'center'
+        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
     }
-
-    msg.innerHTML = `Agora são ${hora} horas. ${saudacao}`;
 
 }
