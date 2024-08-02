@@ -1,7 +1,9 @@
 
 body {
-    background: rgb(117, 146, 243);
-    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("tabuada.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
@@ -25,6 +27,7 @@ div{
 }
 
 footer {
-color: white;
-text-align: center;
+  color: white;
+  text-align: center;
+  margin-top: auto; 
 }
