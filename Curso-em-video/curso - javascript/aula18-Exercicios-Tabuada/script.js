@@ -1,7 +1,7 @@
 
 // ! Exercicios
 
-function verificar() {
+function calcular() {
    
 
 }

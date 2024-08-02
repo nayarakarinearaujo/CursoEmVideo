@@ -1,33 +1,75 @@
-
+html,
 body {
-    background-image: url("tabuada.jpg");
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("tabuada.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
-color: white;
-text-align: center;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+header {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
 }
 
 section {
-background: white;
-border-radius: 10px;
-padding: 15px;
-width: 500px;
-margin: auto;
-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.264);
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  margin-top: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.264);
 }
 
-div{
-    text-align: center;
-    padding: 8px;
+div {
+  text-align: center;
+  padding: 8px;
+}
+
+#dados {
+  align-items: center;
+}
+#dados input[type="number"] {
+  width: 200px;
+  padding: 5px;
+  margin-left: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#dados input[type="number"]:focus {
+  border-color: #ea0047;
+  outline: none;
+}
+
+.button {
+  background: #ea0047;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  width: 150px;
+}
+
+.button:hover {
+  background: #a40132;
 }
 
 footer {
-  color: white;
+  color: #ea0047;
   text-align: center;
   margin: 0px;
 }
