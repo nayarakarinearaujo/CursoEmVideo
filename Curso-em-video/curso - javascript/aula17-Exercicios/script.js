@@ -1,0 +1,7 @@
+
+// ! Exercicios
+
+function verificar() {
+   
+
+}
