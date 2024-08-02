@@ -1,13 +1,24 @@
-body {
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   background-image: url("contador.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   color: white;
   text-align: center;
+  margin-top: 30px;
 }
 
 section {
@@ -16,6 +27,7 @@ section {
   padding: 15px;
   width: 500px;
   margin: auto;
+  margin-top: 30px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.264);
 }
 
@@ -24,7 +36,43 @@ div {
   padding: 8px;
 }
 
-footer {
+p {
+  font-size: 1.2rem;
+}
+
+#dados {
+  align-items: center;
+}
+#dados input[type="number"] {
+  width: 200px;
+  padding: 5px;
+  margin-left: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#dados input[type="number"]:focus {
+  border-color: #f8196c;
+  outline: none;
+}
+
+.button {
+  background: #f8196c;
   color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  width: 80px;
+}
+
+.button:hover {
+  background: #9e1044;
+}
+
+footer {
+  color: #f8196c;
   text-align: center;
+  margin: 0px;
 }
