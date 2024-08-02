@@ -17,19 +17,16 @@ body {
   align-items: center;
 }
 
-header {
-  color: white;
-  text-align: center;
-  margin-top: 30px;
-}
-
 h1 {
+  font-style: italic;
+  color: #ea0047;
+  text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
 section {
-  background: white;
+  background: #f1f1f1;
   border-radius: 10px;
   padding: 15px;
   width: 500px;
@@ -78,8 +75,21 @@ p {
   background: #a40132;
 }
 
+#res {
+  display: flex;
+  justify-content: flex-start; 
+  margin-top: 10px; 
+}
+
+#seltab {
+  width: 200px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin: 0px 50px 0px 0px;
+}
+
 footer {
   color: #ea0047;
   text-align: center;
-  margin: 0px;
+ 
 }
