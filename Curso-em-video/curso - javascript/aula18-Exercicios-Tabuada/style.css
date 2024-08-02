@@ -6,6 +6,7 @@ body {
   background-image: url("tabuada.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -20,6 +21,11 @@ header {
   color: white;
   text-align: center;
   margin-top: 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 section {
@@ -37,12 +43,16 @@ div {
   padding: 8px;
 }
 
-#dados {
+p {
+  font-size: 1.2rem;
+}
+
+#form {
   align-items: center;
 }
-#dados input[type="number"] {
+#form input[type="number"] {
   width: 200px;
-  padding: 5px;
+  padding: 10px;
   margin-left: 15px;
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -50,7 +60,7 @@ div {
   transition: border-color 0.3s ease;
 }
 
-#dados input[type="number"]:focus {
+#form input[type="number"]:focus {
   border-color: #ea0047;
   outline: none;
 }
