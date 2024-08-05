@@ -3,10 +3,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url("tabuada.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+  background: #bad8c0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -26,10 +23,12 @@ h1 {
 }
 
 section {
+  position: relative; 
   background: #f1f1f1;
   border-radius: 10px;
   padding: 15px;
   width: 500px;
+  height: 500px;
   margin: auto;
   margin-top: 30px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.264);
@@ -88,8 +87,46 @@ p {
   margin: 0px 50px 0px 0px;
 }
 
+.img img {
+  position: absolute; 
+  top: 55%; 
+  right: 20px;
+  width: 180px; 
+  height: auto; 
+}
 footer {
   color: #ea0047;
   text-align: center;
  
+}
+
+
+/* Media queries para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    width: 90%; 
+    height: auto;
+    padding: 10px; 
+  }
+
+  #form input[type="number"] {
+    width: 80%; 
+    margin: 10px 0; 
+  }
+
+  .button {
+    width: 80%; 
+  }
+
+  .img img {
+    display: none; 
+  }
+
+  #seltab {
+    width: 80%; 
+  }
 }
