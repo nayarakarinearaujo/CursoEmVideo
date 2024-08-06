@@ -1,7 +1,9 @@
-//Outra forma de fazer
-let valores1 = [8, 1, 7, 4, 2, 9, 13];
-for (let pos in valores1) {
-    console.log(`A posição ${pos} tem o valor: ${valores1[pos]}`);
-}
+//* Buscando valor dentro do array
 
-valores.indexOf(7)
+let num = [5, 8, 2, 9, 3];
+let pos = num.indexOf(4);
+if(pos == -1) {
+    console.log("O valor não foi encontrado :( ")
+} else {
+    console.log(`O valor 8 está na posição: ${pos}`);
+}
