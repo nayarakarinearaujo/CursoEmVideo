@@ -118,7 +118,6 @@ main p {
 main strong {
   color: var(--cor4);
   font-weight: bold;
-  pad: 2px 6px;
 }
 
 main a {
