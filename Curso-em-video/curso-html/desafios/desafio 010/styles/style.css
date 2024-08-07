@@ -104,11 +104,11 @@ main h2 {
 }
 
 main img {
-  width: 100%;
+  width: 80%;
 }
 
 main img .pequena {
-  width: 500%;
+  max-width: 350px;
   display: block;
   margin: auto;
 }
