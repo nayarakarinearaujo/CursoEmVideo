@@ -34,7 +34,7 @@ body {
 }
 
 a.externo::after {
-    content: '\00a0\1F517';
+  content: "\00a0\1F517";
 }
 
 header {
@@ -151,27 +151,43 @@ main img .pequena {
   margin: auto;
 }
 
+div.video {
+  background-color: var(--cor5);
+  margin: 0px -20px 30px -20px;
+  padding: 20px;
+  padding-bottom: 59%;
+  position: relative;
+}
+
+div.video > iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
 aside {
-    background-color: var(--cor1);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+  background-color: var(--cor1);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
 }
 
 aside h3 {
-    background-color: var(--cor4);
-    color: white;
-    padding: 10px;
-    margin: -10px -10px 0px -10px; /*Nesse caso para deixar o h3 envolvido com o bloco do aside*/
-    border-radius: 10px 10px 0px 0px;
+  background-color: var(--cor4);
+  color: white;
+  padding: 10px;
+  margin: -10px -10px 0px -10px; /*Nesse caso para deixar o h3 envolvido com o bloco do aside*/
+  border-radius: 10px 10px 0px 0px;
 }
 
 aside > ul {
-    list-style-type: '\2714\00a0\00a0'; 
-    /*\2714 o emoji do chek, e o \00a0 é o espaço sem quebra*/
-    /* * NÃO É COMPATÍVEL COM QUALQUER NAVEGADOR*/
-    list-style-position: inside; /*Para deixar mais para dentro as bolinhas da li*/
-    columns: 2; /*Para dividir em duas colunas a lista*/
+  list-style-type: "\2714\00a0\00a0";
+  /*\2714 o emoji do chek, e o \00a0 é o espaço sem quebra*/
+  /* * NÃO É COMPATÍVEL COM QUALQUER NAVEGADOR*/
+  list-style-position: inside; /*Para deixar mais para dentro as bolinhas da li*/
+  columns: 2; /*Para dividir em duas colunas a lista*/
 }
 
 footer p {
@@ -183,12 +199,12 @@ footer p {
 }
 
 footer a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-footer a:hover{
-    text-decoration: underline;
-    color: var(--cor1);
+footer a:hover {
+  text-decoration: underline;
+  color: var(--cor1);
 }
