@@ -67,17 +67,17 @@ nav {
 }
 
 nav > a {
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition-duration: 0.5s;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition-duration: 0.5s;
 }
 
 nav > a:hover {
-    background-color: var(--cor3);
-    color: var(--cor5);
+  background-color: var(--cor3);
+  color: var(--cor5);
 }
 
 main {
@@ -101,6 +101,37 @@ main h1 {
 
 main h2 {
   font-family: var(--fonte-android);
+  color: var(--cor4);
+  font-size: 1.3em;
+  background-image: linear-gradient(to right, var(--cor1), transparent);
+  text-indent: 8px;
+}
+
+main p {
+  margin: 15px 0px;
+  text-align: justify;
+  text-indent: 30px; /*dar espaço de parágrafo*/
+  font-size: 1em;
+  line-height: 2em;
+}
+
+main strong {
+  color: var(--cor4);
+  font-weight: bold;
+  pad: 2px 6px;
+}
+
+main a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--cor5);
+  background-color: var(--cor1);
+  padding: 2px 6px;
+}
+
+main a:hover {
+  text-decoration: underline;
+  color: var(--cor4);
 }
 
 main img {
