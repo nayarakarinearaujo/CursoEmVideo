@@ -7,15 +7,27 @@
     <title>Teste de Imagem de Fundo</title>
 
     <style>
+        body {
+            background-image: url('imagens/wallpaper001.jpg');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
         div.quadrado {
-            display:inline-block;
+            padding: 10px;
+            margin: 10px;
             border: 2px solid black;
             border-radius: 10px;
             background-color: lightgray;
             width: 300px;
-            height: 300px;
+            height: 500px;
+            box-sizing: border-box;
         }
+
+        /* 3 Maneiras de configurar o fundo */
 
         div#q1 {
             background-color: skyblue;
@@ -25,28 +37,65 @@
             background-image: linear-gradient(to bottom, yellow, red);
         }
 
-
         div#q3 {
-            
+            background-image: url('imagens/pattern003.png');
         }
 
+        div#q4 {
+            background-image: url('imagens/pattern002.png');
+        }
 
+        div#q5 {
+            background-image: url('imagens/pexels-magda-ehlers-pexels-1279813.jpg');
+        }
+
+        div#q6 {
+            background-image: url('imagens/pattern001.png');
+        }
+
+        div#q7 {
+            background-image: url('imagens/pexels-moose-photos-170195-1037994.jpg');
+        }
+
+        div#q8 {
+            background-image: linear-gradient(to bottom, rgb(38, 0, 255), rgb(255, 0, 187));        }
 
     </style>
 </head>
 
 <body>
     <div class="quadrado" id="q1">
-
+        
     </div>
 
     <div class="quadrado" id="q2">
-
+       
     </div>
 
     <div class="quadrado" id="q3">
-
+        
     </div>
+
+    <div class="quadrado" id="q4">
+        
+    </div>
+
+    <div class="quadrado" id="q5">
+      
+    </div>
+
+    <div class="quadrado" id="q6">
+       
+    </div>
+
+    <div class="quadrado" id="q7">
+       
+    </div>
+
+    <div class="quadrado" id="q8">
+       
+    </div>
+
 </body>
 
 </html>
