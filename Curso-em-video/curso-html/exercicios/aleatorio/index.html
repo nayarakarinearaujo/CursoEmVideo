@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividir Tela Horizontalmente</title>
+
+    <!-- Importação de fontes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .top-half {
+            flex: 1;
+            background-image: url('fone-rosa.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        nav {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav ul li {
+            font-size: 18px;
+            color: #333;
+        }
+
+        nav ul li:hover {
+            background-color: skyblue;
+            border-radius: 6px;
+            text-decoration: underline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: inherit;
+        }
+
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            padding-right: 40px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .search-container img {
+            position: absolute;
+            right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .bottom-half {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .bottom-half section {
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .content {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h2 {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .contact {
+            background-color: #f1f1f1;
+        }
+
+        
+
+        
+    </style>
+</head>
+
+<body>
+
+    <h1>SoundVibe</h1>
+
+    <div class="top-half">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+                <li class="search-container">
+                    <input type="text" placeholder="Pesquisar...">
+                    <img src="icons8-pesquisar-40.png" alt="Pesquisar">
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="bottom-half">
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi porro eaque necessitatibus laudantium iste ipsum! Impedit nemo quidem architecto dolorum doloremque ipsa, harum laborum in esse suscipit doloribus, dolor magnam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti quisquam? Fugiat voluptatem odit rem placeat, laboriosam repudiandae voluptas asperiores. Fugiat quos quisquam corrupti assumenda doloremque illum rem, laudantium labore?
+            </p>
+        </section>
+    </div>
+
+    <section class="content">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur voluptates illum id beatae dolores?
+            Voluptatem odit consectetur impedit. Eaque ut consectetur sequi, maxime natus officia qui deleniti ex cum
+            vel!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, officiis aliquid eaque exercitationem,
+            debitis voluptas iure magnam commodi, earum amet minima possimus facere! Autem asperiores, cumque illo
+            aliquam vel tempora!
+        </p>
+    </section>
+<section class="contact">
+    <div class="contact-form">
+        <form action="#">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+
+            <label for="age">Idade</label>
+            <input type="number" id="age" name="age" required placeholder="Digite sua idade">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+
+</body>
+
+</html>
