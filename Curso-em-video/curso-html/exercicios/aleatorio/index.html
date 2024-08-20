@@ -7,7 +7,8 @@
     <title>Dividir Tela Horizontalmente</title>
 
     <!-- Importação de fontes -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
 
     <style>
         body {
@@ -32,12 +33,18 @@
             background-size: cover;
             background-repeat: no-repeat;
             position: relative;
+            padding: 20px;
+            height:150vh ;
+            box-sizing: border-box;
         }
 
         nav {
             position: absolute;
-            bottom: 10px;
-            right: 10px;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
         }
 
         nav ul {
@@ -71,6 +78,22 @@
             display: flex;
             align-items: center;
         }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            padding-right: 40px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .search-container img {
+            position: absolute;
+            right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+
 
         .search-container input[type="text"] {
             padding: 10px;
@@ -121,20 +144,34 @@
         }
 
         .contact {
-            background-color: #f1f1f1;
+            background-color: #d7d7d7;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
+        .contact-form {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
 
-        
-
-        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
     </style>
 </head>
 
 <body>
 
-
-    <div class="top-half">
+    <header class="top-half">
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -146,17 +183,21 @@
                 </li>
             </ul>
         </nav>
-    </div>
+    </header>
 
     <h1>SoundVibe</h1>
 
-    <div class="bottom-half">
-        <section>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi porro eaque necessitatibus laudantium iste ipsum! Impedit nemo quidem architecto dolorum doloremque ipsa, harum laborum in esse suscipit doloribus, dolor magnam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti quisquam? Fugiat voluptatem odit rem placeat, laboriosam repudiandae voluptas asperiores. Fugiat quos quisquam corrupti assumenda doloremque illum rem, laudantium labore?
-            </p>
-        </section>
-    </div>
+
+    <section class="bottom-half">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi porro eaque necessitatibus laudantium iste
+            ipsum! Impedit nemo quidem architecto dolorum doloremque ipsa, harum laborum in esse suscipit doloribus,
+            dolor magnam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti quisquam? Fugiat voluptatem
+            odit rem placeat, laboriosam repudiandae voluptas asperiores. Fugiat quos quisquam corrupti assumenda
+            doloremque illum rem, laudantium labore?
+        </p>
+    </section>
+
 
     <section class="content">
         <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
@@ -168,22 +209,23 @@
             aliquam vel tempora!
         </p>
     </section>
-<section class="contact">
-    <div class="contact-form">
-        <form action="#">
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" required placeholder="Digite seu nome">
 
-            <label for="age">Idade</label>
-            <input type="number" id="age" name="age" required placeholder="Digite sua idade">
+    <section class="contact">
+        <div class="contact-form">
+            <form action="#">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" required placeholder="Digite seu nome">
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                <label for="age">Idade</label>
+                <input type="number" id="age" name="age" required placeholder="Digite sua idade">
 
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-</section>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
 
 
 </body>
