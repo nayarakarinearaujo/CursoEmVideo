@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dividir Tela Horizontalmente</title>
+    <title>Blog sobre Áudio e Tecnologia</title>
 
     <!-- Importação de fontes -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
 
     <style>
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            min-height: 100vh;
         }
 
         h1 {
             text-align: center;
             color: #333;
             margin: 20px 0;
+            font-family: 'Bebas Neue', sans-serif;
         }
 
         .top-half {
@@ -32,19 +32,20 @@
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
-            position: relative;
             padding: 20px;
-            height:150vh ;
+            min-height: 400px;
+            height: 50vh;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         nav {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
             padding: 10px;
             border-radius: 8px;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.7);
         }
 
         nav ul {
@@ -62,7 +63,7 @@
         }
 
         nav ul li:hover {
-            background-color: skyblue;
+            background-color: #e29a9a;
             border-radius: 6px;
             text-decoration: underline;
         }
@@ -94,20 +95,18 @@
             height: 24px;
         }
 
-
-        .search-container input[type="text"] {
-            padding: 10px;
-            padding-right: 40px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
+        .about {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
         }
 
-        .search-container img {
-            position: absolute;
-            right: 10px;
-            width: 24px;
-            height: 24px;
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .bottom-half {
@@ -127,44 +126,136 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        p {
-            font-size: 16px;
-            color: #333;
+        .blog-posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
 
-        .content {
-            margin: 20px;
+        .post {
+            background-color: #ffffff;
             padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(33% - 40px);
+            max-width: 300px;
         }
 
-        h2 {
+        .post img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .post h2 {
             font-family: 'Chakra Petch', sans-serif;
             font-size: 1.2rem;
             color: #333;
         }
 
+        .post p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .post a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .post a:hover {
+            text-decoration: underline;
+        }
+
         .contact {
-            background-color: #d7d7d7;
-            padding: 20px;
+            background-color: #f9f9f9;
+            padding: 40px 20px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .contact-form {
-            background-color: #f1f1f1;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 500px;
+            max-width: 600px; /* Ajustado para maior largura */
         }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form label {
             font-weight: bold;
             color: #333;
+            font-size: 16px; /* Tamanho da fonte do rótulo */
+        }
+
+        .contact-form input {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact-form input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+        }
+
+        .contact-form textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+            resize: vertical; /* Permite redimensionar verticalmente */
+            height: 100px; /* Ajuste de altura */
+        }
+
+        .contact-form button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #e29a9a;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #fcc2be;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .post {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .post {
+                width: 100%;
+                max-width: none;
+            }
+
+            .search-container img {
+                width: 20px;
+                height: 20px;
+            }
         }
     </style>
 </head>
@@ -175,7 +266,7 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
                 <li class="search-container">
                     <input type="text" placeholder="Pesquisar...">
@@ -185,48 +276,58 @@
         </nav>
     </header>
 
-    <h1>SoundVibe</h1>
-
-
-    <section class="bottom-half">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi porro eaque necessitatibus laudantium iste
-            ipsum! Impedit nemo quidem architecto dolorum doloremque ipsa, harum laborum in esse suscipit doloribus,
-            dolor magnam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti quisquam? Fugiat voluptatem
-            odit rem placeat, laboriosam repudiandae voluptas asperiores. Fugiat quos quisquam corrupti assumenda
-            doloremque illum rem, laudantium labore?
-        </p>
+    <h1>Blog sobre Áudio e Tecnologia</h1>
+    
+    <section class="about">
+        <div class="about-content">
+            <h2>Sobre o Blog</h2>
+            <p>Bem-vindo ao Blog sobre Áudio e Tecnologia! Aqui, exploramos tudo sobre fones de ouvido, gadgets tecnológicos e como essas inovações estão mudando o nosso dia a dia. Nosso objetivo é fornecer análises detalhadas, dicas úteis e as últimas notícias do setor.</p>
+        </div>
     </section>
 
+    <section class="bottom-half">
+        <div class="blog-posts">
+            <article class="post">
+                <h2>Novidades em Tecnologia de Áudio</h2>
+                <img src="techfone.jpg" alt="Imagem do Post 1">
+                <p>Descubra as últimas tendências em tecnologia de áudio e como elas podem melhorar sua experiência sonora.</p>
+                <a href="#">Leia mais</a>
+            </article>
 
-    <section class="content">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur voluptates illum id beatae dolores?
-            Voluptatem odit consectetur impedit. Eaque ut consectetur sequi, maxime natus officia qui deleniti ex cum
-            vel!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, officiis aliquid eaque exercitationem,
-            debitis voluptas iure magnam commodi, earum amet minima possimus facere! Autem asperiores, cumque illo
-            aliquam vel tempora!
-        </p>
+            <article class="post">
+                <h2>Tendências em Áudio para 2024</h2>
+                <img src="melhoresfoness.jpg" alt="Tendências em Áudio para 2024">
+                <p>Conheça as tendências emergentes no mundo do áudio para 2024 e o que esperar para o próximo ano.</p>
+                <a href="#">Leia mais</a>
+            </article>
+
+            <article class="post">
+                <h2>Como Escolher o Fone de Ouvido Ideal</h2>
+                <img src="idealfone.jpg" alt="Imagem do Post 2">
+                <p>Dicas para escolher o fone de ouvido perfeito, levando em consideração conforto, qualidade de som e orçamento.</p>
+                <a href="#">Leia mais</a>
+            </article>
+            
+        </div>
     </section>
 
     <section class="contact">
         <div class="contact-form">
-            <form action="#">
-                <label for="name">Nome</label>
-                <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+            <h2>Contato</h2>
+            <form action="mailto:contato@seublog.com" method="post" enctype="text/plain">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
 
-                <label for="age">Idade</label>
-                <input type="number" id="age" name="age" required placeholder="Digite sua idade">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
 
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </section>
-
 
 </body>
 
